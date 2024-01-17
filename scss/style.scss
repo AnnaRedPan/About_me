@@ -1,0 +1,246 @@
+$colorb:rgb(150,202,187);
+$color1:rgb(1, 63, 70);
+$color2:rgb(0, 94, 70);
+$color3:rgb(0, 154, 231);
+$color4:rgb(38,176,137);
+$color5: darken($color4, 10%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $colorb;
+  color:$color1;
+  margin: 0 !important;
+}
+
+header {
+  background-color: $colorb;
+  border-bottom: 1px solid $colorb;
+  border-top: 1px solid $colorb;
+  position: static;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  margin: 0 !important;
+}
+
+.lista {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 1em;
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3.5em;
+  padding: 10px 35px;
+  font-family: "Playfair Display", sans-serif;
+  color: $color1;
+}
+
+@media screen and (max-width: 720px) {
+  .lista li {
+    font-size: 0.6em;
+    margin: 0;
+  }
+
+  .offerta {
+    font-size: 0.6em;
+  }
+
+  .title {
+    font-size: 2.5em;
+    margin: 0.5px;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .lista li {
+    font-size: 0.6em;
+  }
+
+  .offerta {
+    font-size: 0.6em;
+  }
+
+  .title {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .lista li {
+    font-size: 1em;
+  }
+
+  .offerta {
+    font-size: 1em;
+  }
+
+  .title {
+    font-size: 5em;
+  }
+}
+
+.collegamento {
+  padding: 15px 25px;
+  color:$color2;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.collegamento:hover {
+  color:$color3;
+}
+
+.titolo {
+  padding: 10px 35px;
+  font-family: "Playfair Display", sans-serif;
+  position: center;
+  color: $color1;
+}
+
+main {
+  margin: 17px;
+}
+
+.public {
+  color: $color2;
+}
+
+.public:hover {
+  color:$color3;
+}
+
+#banner {
+  background-image: url('../img/gridotto.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+}
+
+.media img {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .media {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media img {
+    margin: 10px 0;
+  }
+}
+
+footer {
+  background-color: $colorb;
+  border-bottom: 15px solid $colorb;
+  position: static;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.coins {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body.submission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+#overlay {
+  text-align: center;
+}
+
+.thanks {
+  position: relative;
+  z-index: 1;
+}
+
+#pinguino {
+  display: block;
+}
+
+#toggle {
+  transform: scale(1.5);
+  width: 120px;
+  height: 30px;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  z-index: 1;
+  background-color: $color4;
+  border-color: $color5;
+}
+
+#toggle a {
+  color: $color2;
+  text-decoration: none;
+  justify-content: center;
+  display: inline-block;
+}
+
+#toggle:hover a {
+  color: rgb(88, 197, 251);
+  opacity: 1;
+}
+
+#toggle.is-active a {
+  opacity: 0;
+}
+
+#toggle i {
+  opacity: 0;
+}
+
+#toggle.is-active i {
+  opacity: 1;
+}
+
+#menu {
+  background-color:$colorb;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $color1;
+  font-size: 1em;
+}
+
+#menu.active {
+  right: 0;
+}
